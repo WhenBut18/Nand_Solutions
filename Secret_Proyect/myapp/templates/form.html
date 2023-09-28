@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>DenunciApp - Formulario</title>
+</head>
+<body>
+    <hr>
+    <h2>Menu:</h2>
+    <ul>
+        <li>
+            <a href="">Inicio</a>
+        </li>
+        <li>
+            <a href="sobre-denunciapp">Sobre DenunciApp</a>
+        </li>
+        <li>
+            <a href="formulario/">Formulario</a>
+        </li>
+    </ul>
+    <br/>
+    <hr>
+    <h1>Formulario de Denuncia</h1>
+    <hr>
+    <form>
+        <h4>Informacion de Contacto</h4>
+            <label>Nombres:</label>
+            <input type="text"/>
+
+            <label>Apellidos:</label>
+            <input type="text"/>
+
+            <label>Edad:</label>
+            <input type="number"/><br/>
+            <br/>
+
+            <label>Rut:</label>
+            <input type="text"/>
+
+            <label>Direccion Domicilio:</label>
+            <input type="text"/>
+        
+            <label>Telefono Celular:</label>
+            <input type="number"/><br/>
+            <br/>
+
+            <label>Correo Electronico:</label>
+            <input type="email"/><br/>
+
+        <h4>Detalles del Incidente</h4>
+        <label>Tipo de Agresion:</label>
+            <select>
+                <option></option>
+                <option>Sexual</option>
+                <option>Laboral</option>
+                <option>Domestico</option>
+                <option>Psicologico</option>
+                <option>Social</option>
+                <option>Fisico</option>
+                <option>Verbal</option>
+            </select>
+        
+            <label>Motivo:</label>
+            <select>
+            <option></option>
+            <option>Machismo</option>
+            <option>Homofobia</option>
+            <option>Transfobia</option>
+            <option>Clasismo</option>
+            <option>Racismo</option>
+            </select>
+
+            <label>Direccion del Incidente:</label>
+            <input type="text"/><br/>
+            <br/>
+            <label>Fecha del Incidente:</label>
+            <input type="date"/>
+
+            <label>Hora del Incidente:</label>
+            <input type="time"/><br/>
+            <br/>
+        <input type="submit" value="Enviar Formulario"/>
+    </form>
+</body>
+</html>
