@@ -19,38 +19,46 @@
         <li>
             <a href="/formulario/">Formulario</a>
         </li>
+        <li>
+            <a href="/mapa/">Mapa</a>
+        </li>
     </ul>
     <br/>
     <hr>
     <h1>Formulario de Denuncia</h1>
     <hr>
-    <form>
-        <h4>Informacion de Contacto</h4>
+    <form action="/formulario/new/" method="POST">
+        {% csrf_token %}
+        
+        <fieldset>
+            <legend><b>Datos Personales</b></legend>
             <label>Nombres:</label>
-            <input type="text"/>
+            <input type="text" name="Nombres" placeholder="Escribe tus Nombres"/>
 
             <label>Apellidos:</label>
-            <input type="text"/>
+            <input type="text" name="Apellidos" placeholder="Escribe tus Apellidos"/>
 
             <label>Edad:</label>
-            <input type="number"/><br/>
+            <input type="number" name="Edad" placeholder="Escribre tu Edad"/><br/>
             <br/>
 
             <label>Rut:</label>
-            <input type="text"/>
+            <input type="text" name="Rut" placeholder="Escribe tu Rut"/>
 
             <label>Direccion Domicilio:</label>
-            <input type="text"/>
+            <input type="text" name="Direccion" placeholder="Escribe tu Direccion"/>
         
             <label>Telefono Celular:</label>
-            <input type="number"/><br/>
+            <input type="number" name="Telefono" placeholder="Escribe tu Numero Celular"/><br/>
             <br/>
 
             <label>Correo Electronico:</label>
-            <input type="email"/><br/>
-
-        <h4>Detalles del Incidente</h4>
-        <label>Tipo de Agresion:</label>
+            <input type="email" name="Correo" placeholder="Escribe tu Correo Electronico"/><br/>
+        </fieldset>
+        <br>
+        <Fieldset>
+            <legend><b>Detalles del Incidente</b></legend>
+            <label>Tipo de Agresion:</label>
             <select>
                 <option></option>
                 <option>Sexual</option>
@@ -81,7 +89,9 @@
             <label>Hora del Incidente:</label>
             <input type="time"/><br/>
             <br/>
-        <input type="submit" value="Enviar Formulario"/>
+        </Fieldset>
+        <br>
+        <button>Enviar</button>
     </form>
 </body>
 </html>
