@@ -3,95 +3,84 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DenunciAPP - Formulario</title>
+    <link rel="stylesheet" href="{% static 'css/form.css'%}">
 </head>
 <body>
-    <hr>
-    <h2>Menu:</h2>
-    <ul>
-        <li>
-            <a href="/">Inicio</a>
-        </li>
-        <li>
-            <a href="/sobre-denunciapp/">Sobre DenunciAPP</a>
-        </li>
-        <li>
-            <a href="/formulario/">Formulario</a>
-        </li>
-        <li>
-            <a href="/mapa/">Mapa</a>
-        </li>
-    </ul>
-    <br/>
-    <hr>
-    <h1>Formulario de Denuncia</h1>
-    <hr>
-    <form action="/formulario/new/" method="POST">
+    <header>
+        <h1>DenunciAPP</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/sobre-denunciapp/">Sobre DenunciAPP</a></li>
+            <li><a href="/formulario/">Formulario</a></li>
+            <li><a href="/mapa/">Mapa</a></li>
+        </ul>
+    </nav>
+    <form action="/registrarform/" method="POST">
         {% csrf_token %}
         
         <fieldset>
             <legend><b>Datos Personales</b></legend>
             <label>Nombres:</label>
-            <input type="text" name="Nombres" placeholder="Escribe tus Nombres"/>
+            <input type="text" name="txtNombres" placeholder="Escribe tus Nombres"/>
 
             <label>Apellidos:</label>
-            <input type="text" name="Apellidos" placeholder="Escribe tus Apellidos"/>
+            <input type="text" name="txtApellidos" placeholder="Escribe tus Apellidos"/>
 
             <label>Edad:</label>
-            <input type="number" name="Edad" placeholder="Escribre tu Edad"/><br/>
-            <br/>
+            <input type="number" name="txtEdad" placeholder="Escribe tu Edad"/><br/>
 
             <label>Rut:</label>
-            <input type="text" name="Rut" placeholder="Escribe tu Rut"/>
+            <input type="text" name="txtRut" placeholder="Escribe tu Rut"/>
 
             <label>Direccion Domicilio:</label>
-            <input type="text" name="Direccion" placeholder="Escribe tu Direccion"/>
+            <input type="text" name="txtDireccion" placeholder="Escribe tu Direccion"/>
         
-            <label>Telefono Celular:</label>
-            <input type="number" name="Telefono" placeholder="Escribe tu Numero Celular"/><br/>
-            <br/>
+            <label>Telefono Ce lul ar:</label>
+            <input type="number" name="txtTelefono" placeholder="Escribe tu Numero Celular"/><br/>
 
             <label>Correo Electronico:</label>
-            <input type="email" name="Correo" placeholder="Escribe tu Correo Electronico"/><br/>
+            <input type="email" name="txtCorreo" placeholder="Escribe tu Correo Electronico"/><br/>
         </fieldset>
-        <br>
+        
         <Fieldset>
             <legend><b>Detalles del Incidente</b></legend>
             <label>Tipo de Agresion:</label>
-            <select>
-                <option></option>
-                <option>Sexual</option>
-                <option>Laboral</option>
-                <option>Domestico</option>
-                <option>Psicologico</option>
-                <option>Social</option>
-                <option>Fisico</option>
-                <option>Verbal</option>
+            <select name="TipoAgresion">
+                <option value="">Selecciona...</option>
+                <option value="Sexual">Sexual</option>
+                <option value="Laboral">Laboral</option>
+                <option value="Domestico">Domestico</option>
+                <option value="Psicologico">Psicologico</option>
+                <option value="Social">Social</option>
+                <option value="Fisico">Fisico</option>
+                <option value="Verbal">Verbal</option>
             </select>
         
             <label>Motivo:</label>
-            <select>
-            <option></option>
-            <option>Machismo</option>
-            <option>Homofobia</option>
-            <option>Transfobia</option>
-            <option>Clasismo</option>
-            <option>Racismo</option>
+            <select name="TipoMotivo">
+                <option value="">Selecciona...</option>
+                <option value="Machismo">Machismo</option>
+                <option value="Homofobia">Homofobia</option>
+                <option value="Transfobia">Transfobia</option>
+                <option value="Clasismo">Clasismo</option>
+                <option value="Racismo">Racismo</option>
             </select>
 
             <label>Direccion del Incidente:</label>
-            <input type="text"/><br/>
-            <br/>
+            <input type="text" name="txtDireccionIncidente"/><br/>
+            
             <label>Fecha del Incidente:</label>
-            <input type="date"/>
+            <input type="date" name="txtFechaIncidente"/>
 
             <label>Hora del Incidente:</label>
-            <input type="time"/><br/>
-            <br/>
+            <input type="time" name="txtHoraIncidente"/><br/>
         </Fieldset>
-        <br>
-        <button>Enviar</button>
+        
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
