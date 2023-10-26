@@ -9,6 +9,8 @@ def about(request):
     return render(request, 'about.html')
 def form(request):
     return render(request, 'form.html')
+def questions(request):
+    return render(request, 'questions.html')
 def create_form(request):
     print(request.POST)
     return redirect('/formulario/')

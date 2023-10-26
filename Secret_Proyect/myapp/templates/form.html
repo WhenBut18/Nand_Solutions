@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>DenunciAPP</h1>
+        <div class="recorte">
+            <img src="{% static 'img/logo-header.jpeg' %}" alt="" height='220px'>
+        </div>
     </header>
     <nav>
         <ul>
@@ -17,6 +19,7 @@
             <li><a href="/sobre-denunciapp/">Sobre DenunciAPP</a></li>
             <li><a href="/formulario/">Formulario</a></li>
             <li><a href="/mapa/">Mapa</a></li>
+            <li><a href="/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
         </ul>
     </nav>
     <form action="/registrarform/" method="POST">
@@ -39,7 +42,7 @@
             <label>Direccion Domicilio:</label>
             <input type="text" name="txtDireccion" placeholder="Escribe tu Direccion"/>
         
-            <label>Telefono Ce lul ar:</label>
+            <label>Telefono Celular:</label>
             <input type="number" name="txtTelefono" placeholder="Escribe tu Numero Celular"/><br/>
 
             <label>Correo Electronico:</label>

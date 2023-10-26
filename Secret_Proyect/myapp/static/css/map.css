@@ -1,4 +1,11 @@
+.recorte {
+    height: 130px;
+    overflow: hidden;
+}
 
+.recorte img {
+    margin: -45px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #231F20;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -17,7 +24,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
-    background-color: #444;
+    background-color: #333;
     margin: 0;
 }
 

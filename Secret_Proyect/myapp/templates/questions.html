@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenunciAPP - Sobre DenunciAPP</title>
+    <link rel="stylesheet" href="{% static 'css/questions.css' %}">
+</head>
+<body>
+    <header>
+        <div class="recorte">
+            <img src="{% static 'img/logo-header.jpeg' %}" alt="" height='220px'>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/sobre-denunciapp/">Sobre DenunciAPP</a></li>
+            <li><a href="/formulario/">Formulario</a></li>
+            <li><a href="/mapa/">Mapa</a></li>
+            <li><a href="/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content">
+            <h2>Preguntas Frecuentes</h2>
+            <ul>
+                <li>¿Como se usa DenunciAPP?</li>
+                <p>Para empezar a DenunciAPP no debes registrarte ni nada parecido, solo debes de dirigirte al <a href="/formulario/">formulario</a> para realizar tu primera denuncia, recuerda rellenar todos los datos solicitados, para asi hacer valida tu denuncia y aprovechar la funcionalidad de DenunciAPP.</p>
+                <li>Origen de DenunciAPP</li>
+                <p>Esta aplicación / página web, tiene como origen el desarrollo de un proyecto semestral para la asignatura de Introducción a la Ingeniería, supervisado por la docente Elizabeth Montero. El proyecto busca que nosotros como estudiante creemos una aplicación web en torno a alguna de las siguientes 3 propuestas, inclusión y no discriminación, apps con enfoque de género, y cambio climático, nosotros como grupo decidimos elegir la propuesta número uno, sobre la cual fundamos la empresa *ficticia* NAND Solutions y posteriormente comenzar con el desarrollo de la aplicación de nuestro proyecto, dando origen así a DenunciAPP.</p>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

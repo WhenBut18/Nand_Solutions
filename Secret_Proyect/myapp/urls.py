@@ -7,4 +7,5 @@ urlpatterns = [
     path("formulario/", views.form),
     path("mapa/", views.map),
     path("registrarform/", registrar_form),
+    path('preguntas-frecuentes/', views.questions)
 ]

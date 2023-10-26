@@ -1,37 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DenunciAPP - Inicio</title>
-    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
 </head>
 <body>
-    <div>
-        <hr>
-        <h1>INICIO EN CONSTRUCCION // PAGINA PROVISIONAL</h1>
-        <hr>
-    </div>
-    <div class="menu-asset">
-        <h2>Menu:</h2>
+    <header>
+        <div class="recorte">
+            <img src="{% static 'img/logo-header.jpeg' %}" alt="" height='220px'>
+        </div>
+    </header>
+    <nav>
         <ul>
-            <li>
-                <a href="/">Inicio</a>
-            </li>
-            <li>
-                <a href="/sobre-denunciapp/">Sobre DenunciAPP</a>
-            </li>
-            <li>
-                <a href="/formulario/">Formulario</a>
-            </li>
-            <li>
-                <a href="/mapa/">Mapa</a>
-            </li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/sobre-denunciapp/">Sobre DenunciAPP</a></li>
+            <li><a href="/formulario/">Formulario</a></li>
+            <li><a href="/mapa/">Mapa</a></li>
+            <li><a href="/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
         </ul>
-    </div>
+    </nav>
+        <br/>
 </body>
-<header>
-
-</header>
 </html>
