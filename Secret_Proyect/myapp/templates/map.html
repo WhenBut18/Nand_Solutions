@@ -26,7 +26,7 @@
 
         script.setAttribute(
           "src",
-          "{% static 'json/archivo_test.json' %}"
+          "{% static 'json/datos2.txt' %}"
         );
         document.getElementsByTagName("head")[0].appendChild(script);
       }
@@ -34,7 +34,6 @@
 
         for (let i = 0; i < results.features.length; i++) {
           const coords = results.features[i].geometry.coordinates;
-          
           const latLng = new google.maps.LatLng(coords[1], coords[0]);
           const marker = new google.maps.Marker({
             position: latLng,
@@ -44,13 +43,11 @@
           const f = results.features[i].properties;
           
           marker.addListener("click", (e) => {
-            const d = new Date(0);
-            d.setUTCMilliseconds(f.time);
             
             const contentString = 
               '<div class="info-window-content">'+
               '<h2>'+f.place +'</h2>'+
-              '<h3>Magnitude '+f.mag+'</h3><p>'+d.toString()+'</p>'+
+              '<h3>'+f.mag+'</h3><p>'
               '</div>';
             
             infoWindow.setContent(contentString);

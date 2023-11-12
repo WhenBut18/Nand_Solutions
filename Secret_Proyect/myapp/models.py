@@ -16,3 +16,4 @@ class Denuncia(models.Model):
     Direccion_Agresion = models.CharField(max_length=50)    
     Fecha = models.CharField(max_length=50)
     Hora = models.CharField(max_length=50)
+    Longitud_Latitud = models.CharField(max_length=50)

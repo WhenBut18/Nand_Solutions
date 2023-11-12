@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DenunciAPP - Sobre DenunciAPP</title>
     <link rel="stylesheet" href="{% static 'css/questions.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -25,15 +26,36 @@
     </nav>
 
     <main>
-        <section class="content">
+        <div class="wrapper">
             <h2>Preguntas Frecuentes</h2>
-            <ul>
-                <li>¿Como se usa DenunciAPP?</li>
-                <p>Para empezar a DenunciAPP no debes registrarte ni nada parecido, solo debes de dirigirte al <a href="/formulario/">formulario</a> para realizar tu primera denuncia, recuerda rellenar todos los datos solicitados, para asi hacer valida tu denuncia y aprovechar la funcionalidad de DenunciAPP.</p>
-                <li>Origen de DenunciAPP</li>
-                <p>Esta aplicación / página web, tiene como origen el desarrollo de un proyecto semestral para la asignatura de Introducción a la Ingeniería, supervisado por la docente Elizabeth Montero. El proyecto busca que nosotros como estudiante creemos una aplicación web en torno a alguna de las siguientes 3 propuestas, inclusión y no discriminación, apps con enfoque de género, y cambio climático, nosotros como grupo decidimos elegir la propuesta número uno, sobre la cual fundamos la empresa *ficticia* NAND Solutions y posteriormente comenzar con el desarrollo de la aplicación de nuestro proyecto, dando origen así a DenunciAPP.</p>
-            </ul>
-        </section>
+            <div class="faq active">
+                <button class="accordion">
+                    ¿Como obtienen sus datos?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+                    <p>La informacion se consigue a traves de formularios que los usuarios llenan con sus experiencias, esta va por categorias y los usuarios explican la situación, el donde, el que paso, y la zona del mismo incidente. De este modo podemos tomar la experiencia y el sector y asignarlo al mapa, asi por medio de "zonas de calor" se podra ver que zonas tiene el mayor / menor numero de incidentes por medio de la intencidad del color.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for(i = 0; i < acc.length ; i++){
+                acc[i].addEventListener("click", function
+                () {
+                    this.ClassList.toggle("active")
+                    this.parentElement.ClassList.toggle("active");
+                    var pannel = this.nextElementSibling;
+                    if(pannel.style.display === "block"){
+                        pannel.style.display = "none";
+                    }else{
+                        pannel.style.display = "block";
+                    }
+                });
+            }
+
+        </script>
     </main>
 </body>
 </html>
